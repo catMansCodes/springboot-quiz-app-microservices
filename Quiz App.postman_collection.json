@@ -1,0 +1,562 @@
+{
+  "info": {
+    "_postman_id": "d2699b8d-b209-4414-b1bd-c433c0679e64",
+    "name": "Quiz App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "16075219"
+  },
+  "item": [
+    {
+      "name": "microservice",
+      "item": [
+        {
+          "name": "Question App",
+          "item": [
+            {
+              "name": "Get All Questions Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8081/api/questions",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create New Question Copy",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"questionText\": \"what is javascript?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend designing app\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/create",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Update Question Copy",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"questionText\": \"what is javaScript?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend language\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"java\",\r\n    \"difficulty\": \"easy\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/15",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "15"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Question By Id Copy",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "localhost:8081/api/questions/15",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "15"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete Question by Id Copy",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"questionText\": \"what is javascript?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend designing app\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\"\r\n}"
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/15",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "15"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Create Quiz Copy",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\",\r\n    \"numberOfQuestions\": 5\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/generate",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "generate"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Quiz Questions Copy",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    12,\r\n    1\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/getQuestions",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "getQuestions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Score Copy",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"questionId\": 12,\r\n        \"answer\": \"OOP Language\"\r\n    },\r\n    {\r\n        \"questionId\": 1,\r\n        \"answer\": \"OOP Language\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8081/api/questions/getScore",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "questions",
+                    "getScore"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Quiz App",
+          "item": [
+            {
+              "name": "Create Quiz",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"this quiz for java devs\",\r\n    \"description\": \"This is weekely quize for test java knowledge\",\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\",\r\n    \"numberOfQuestions\": 5\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8082/api/quiz/create",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "api",
+                    "quiz",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Quiz Questions",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    12,\r\n    1\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8082/api/quiz/getQuestions",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "api",
+                    "quiz",
+                    "getQuestions"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Score",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"questionId\": 12,\r\n        \"answer\": \"OOP Language\"\r\n    },\r\n    {\r\n        \"questionId\": 1,\r\n        \"answer\": \"OOP Language\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:8082/api/quiz/getScore",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8082",
+                  "path": [
+                    "api",
+                    "quiz",
+                    "getScore"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Test From Gateway Config",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"questionId\": 12,\r\n        \"answer\": \"OOP Language\"\r\n    },\r\n    {\r\n        \"questionId\": 1,\r\n        \"answer\": \"OOP Language\"\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8090/quiz-service/api/quiz/getScore",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "quiz-service",
+                "api",
+                "quiz",
+                "getScore"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Monolethic App",
+      "item": [
+        {
+          "name": "Get All Questions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/questions",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "questions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Question",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"questionText\": \"what is javascript?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend designing app\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/questions/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "questions",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Question",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"questionText\": \"what is java?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend language\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"java\",\r\n    \"difficulty\": \"easy\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/questions/3",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "questions",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Question By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:8080/api/questions/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "questions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Question by Id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"questionText\": \"what is javascript?\",\r\n    \"optionA\": \"OOP Language\",\r\n    \"optionB\": \"Database language\",\r\n    \"optionC\": \"Frontend designing app\",\r\n    \"optionD\": \"text editor\",\r\n    \"correctAnswer\": \"OOP Language\",\r\n    \"category\": \"Java\",\r\n    \"difficulty\": \"easy\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/api/questions/1",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "questions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create New Quiz",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Spring Quiz\",\r\n    \"description\": \"This is weekely quize for test java knowledge\",\r\n    \"difficulty\": \"easy\",\r\n    \"category\": \"Spring\",\r\n    \"numberOfQuestions\": 5\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/quiz/create",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "quiz",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Quiz By Id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Java Quiz\",\r\n    \"description\": \"This is weekely quize for test java knowledge\",\r\n    \"difficulty\": \"easy\",\r\n    \"category\": \"Java\",\r\n    \"numberOfQuestions\": 5\r\n}"
+            },
+            "url": {
+              "raw": "localhost:8080/api/quiz/7",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "quiz",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Quiz Submit Answer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"questionId\": 7,\r\n        \"answer\": \"XML Only\"\r\n    },\r\n    {\r\n        \"questionId\": 13,\r\n        \"answer\": \"Authentication\"\r\n    },\r\n    {\r\n        \"questionId\": 4,\r\n        \"answer\": \"Dependency Injection\"\r\n    }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:8080/api/quiz/submit/7",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "quiz",
+                "submit",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
